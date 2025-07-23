@@ -63,12 +63,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/notes",
+					"raw": "http://localhost:8900/notes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "8900",
 					"path": [
 						"notes"
 					]
@@ -122,12 +122,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/notes",
+					"raw": "http://localhost:8900/notes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "8900",
 					"path": [
 						"notes"
 					]
@@ -206,12 +206,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/notes/{{noteId}}",
+					"raw": "http://localhost:8900/notes/{{noteId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "8900",
 					"path": [
 						"notes",
 						"{{noteId}}"
@@ -251,7 +251,7 @@
 							"",
 							"pm.test('when request the updated note', () => {",
 							"   const noteId = pm.environment.get('noteId');",
-							"   pm.sendRequest(`http://localhost:5000/notes/${noteId}`, (error, response) => {",
+							"   pm.sendRequest(`http://localhost:8900/notes/${noteId}`, (error, response) => {",
 							"       if(!error) {",
 							"            pm.test('then the updated note should contain the latest data', () => {",
 							"                const responseJson = response.json();",
@@ -289,12 +289,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/notes/{{noteId}}",
+					"raw": "http://localhost:8900/notes/{{noteId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "8900",
 					"path": [
 						"notes",
 						"{{noteId}}"
@@ -334,7 +334,7 @@
 							"",
 							"pm.test('when request the deleted note', () => {",
 							"    const noteId = pm.environment.get('noteId');",
-							"    pm.sendRequest(`http://localhost:5000/notes/${noteId}`, (error, response) => {",
+							"    pm.sendRequest(`http://localhost:8900/notes/${noteId}`, (error, response) => {",
 							"        if(!error) {",
 							"            pm.test('the deleted note should be not found', () => {",
 							"                pm.expect(response.code).to.equals(404);",
@@ -354,12 +354,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/notes/{{noteId}}",
+					"raw": "http://localhost:8900/notes/{{noteId}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "8900",
 					"path": [
 						"notes",
 						"{{noteId}}"
